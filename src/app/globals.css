@@ -3,13 +3,58 @@
 @tailwind utilities;
 
 .image-reveal {
-  mask-image: url(/smoke_sprites.webp);
+  mask-image: url(/assets/smoke_sprites.webp);
   mask-size: 100% 4800%;
   mask-position: 0 0;
   animation: mask-reveal 2s 0s steps(47) forwards, mmfadeIn-noScale 1s cubic-bezier(0, 0, 0.2, 1) 0s both;
 }
 
-.visible.image-reveal {}
+.slide {
+  animation: scroll 40s linear infinite;
+  width: calc(250px * 14);
+}
+
+.slider {
+
+
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 7))
+  }
+}
+
 
 @keyframes mmfaadeIn-noScale {
   0% {
@@ -21,6 +66,8 @@
     opacity: 1;
   }
 }
+
+
 
 @keyframes mask-reveal {
   0% {
