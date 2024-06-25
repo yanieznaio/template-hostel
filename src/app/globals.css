@@ -2,28 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.image-reveal {
+  mask-image: url(/smoke_sprites.webp);
+  mask-size: 100% 4800%;
+  mask-position: 0 0;
+  animation: mask-reveal 2s 0s steps(47) forwards, mmfadeIn-noScale 1s cubic-bezier(0, 0, 0.2, 1) 0s both;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.visible.image-reveal {}
+
+@keyframes mmfaadeIn-noScale {
+  0% {
+    opacity: 0;
+
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes mask-reveal {
+  0% {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  100% {
+    -webkit-mask-position: 0 100%;
+    mask-position: 0 100%;
+  }
 }
 
 @layer utilities {
