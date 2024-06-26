@@ -11,8 +11,8 @@ const Header = () => {
             </div>
 
             <div className=' flex gap-4 '>
-                <Link href="/" className='border border-black px-2 py-px  hover:bg-black hover:text-white transition-colors ease duration-[0.5s] hidden md:flex items-center gap-2'><span>Reserver</span><span><CiPhone /></span></Link>
-                <Link href="/" className='border border-black px-2 py-px hover:bg-black hover:text-white transition-colors ease duration-[0.5s] hidden md:flex gap-2 items-center'><span>Appeler </span><span><CiCalendar /></span></Link>
+                <Link href="/" className='border border-black px-2 py-px bg-white hover:bg-black hover:text-white transition-colors ease duration-[0.5s] hidden md:flex items-center gap-2'><span>Reserver</span><span><CiPhone /></span></Link>
+                <Link href="/" className='border border-black px-2 py-px bg-white hover:bg-black hover:text-white transition-colors ease duration-[0.5s] hidden md:flex gap-2 items-center'><span>Appeler </span><span><CiCalendar /></span></Link>
                 <button className='uppercase'>Menu</button>
             </div>
 

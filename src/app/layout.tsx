@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Duru_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/header/Header";
+import Footer from "./_components/footer/Footer";
 
 const duru = Duru_Sans({
   weight: '400',
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={duru.className}>
         <Header />
         {children}
+        <Footer />
 
       </body>
     </html>

@@ -9,6 +9,11 @@
   animation: mask-reveal 2s 0s steps(47) forwards, mmfadeIn-noScale 1s cubic-bezier(0, 0, 0.2, 1) 0s both;
 }
 
+body {
+  background-color: #F6F8F5;
+}
+
+
 .slide {
   animation: scroll 40s linear infinite;
   width: calc(250px * 14);
@@ -82,6 +87,23 @@
 }
 
 @layer utilities {
+
+  p {
+    @apply text-[16px] leading-[1.8] tracking-[.03em]
+  }
+
+  h1 {
+    @apply font-serif text-5xl md:text-7xl tracking-wider
+  }
+
+  h2 {
+    @apply font-serif
+  }
+
+  .container {
+    @apply md:max-w-5xl 2xl:max-w-7xl m-auto md:mt-40 mt-20
+  }
+
   .text-balance {
     text-wrap: balance;
   }
