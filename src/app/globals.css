@@ -89,7 +89,7 @@ body {
 @layer utilities {
 
   p {
-    @apply text-[16px] leading-[1.8] tracking-[.03em]
+    @apply text-[14px] leading-[1.8] tracking-[.03em]
   }
 
   h1 {
