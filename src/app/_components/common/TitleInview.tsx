@@ -2,11 +2,15 @@
 import React, { useRef } from 'react'
 import { useInView } from 'framer-motion'
 
-const TitleInview = ({ text }: { text: string }) => {
+const TitleInview = ({
+    children,
+}: {
+    children: React.ReactNode
+}) => {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true });
     return (
-        <h1 ref={ref} className={`  ${isInView && "image-reveal visible.image-reveal "} `}>{text}</h1>
+        <div ref={ref} className={`  ${isInView && "image-reveal visible.image-reveal "} `}>{children}</div>
     )
 }
 

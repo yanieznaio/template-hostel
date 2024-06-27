@@ -1,17 +1,26 @@
 import React from 'react'
 import { informations } from '@/app/data/data'
 import Link from 'next/link'
+import TitleInview from '../common/TitleInview'
 const Information = () => {
     return (
         <div className='mt-20 border-t border-black max-w-6xl m-auto pt-10 flex justify-between'>
+
             <div className='relative '>
+
                 <div className='absolute top-20 -left-20 rotate-[90deg] font-extralight'>
+
                     <p>Derniéres</p>
                     <h2 className='text-5xl font-serif  font-extralight'>Informations</h2>
 
 
                 </div>
+
+
+
             </div>
+
+
 
 
             <div className='w-2/3 flex flex-col gap-14'>

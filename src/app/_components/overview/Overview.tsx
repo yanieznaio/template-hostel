@@ -13,7 +13,9 @@ const Overview = () => {
         <div className='container'>
 
 
-            <TitleInview text="Overview" />
+            <TitleInview>
+                <h1>Overview</h1>
+            </TitleInview>
             <p className='flex gap-4 items-center font-serif mt-8'><span className='w-10 h-px bg-black' /> <span>A propos</span></p>
             <p className='mt-10 md:w-3/4'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellat a sequi cum illo laborum dignissimos dolorem voluptatem ducimus delectus culpa soluta, facere saepe iure tenetur aliquam corporis numquam cumque.
