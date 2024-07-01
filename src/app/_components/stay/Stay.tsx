@@ -77,6 +77,11 @@ const Stay = () => {
 
 
             </div>
+            <div className='mt-40 border border-black p-2'>
+                <div className='md:h-[70vh] w-full h-[400px] relative'>
+                    <Image src="/assets/heroBackground.jpg" alt="image" fill className='object-cover' />
+                </div>
+            </div>
         </>
 
     )
